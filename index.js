@@ -19,7 +19,10 @@ function calculate(){
  .then(data => {
     let rate=data.conversion_rates[currency_two];
     rateEl.innerHTML=`1 ${currency_one} = ${rate}  ${currency_two}`;
+
+ amountEl_two.value= (rate * amountEl_one.value  ).toFixed(2);
  })
+
 }
 
 function swap(){
